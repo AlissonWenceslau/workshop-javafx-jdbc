@@ -23,6 +23,7 @@ public class Main extends Application {
 			
 			mainScene = new Scene(scrollPane);			
 			primaryStage.setScene(mainScene);
+			primaryStage.setResizable(false);
 			primaryStage.setTitle("Sample JavaFX application");
 			primaryStage.show();
 			
