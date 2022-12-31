@@ -25,9 +25,9 @@ public class Main extends Application {
 			
 			//Instancia da scena
 			mainScene = new Scene(scrollPane);
-			//setScene
-			primaryStage.setScene(mainScene);
 			//Especifica a cena a ser usada neste stage.
+			primaryStage.setScene(mainScene);
+			//Define o valor da propriedade redimensionável.
 			primaryStage.setResizable(false);
 			//Especifica o título do stage
 			primaryStage.setTitle("Sample JavaFX application");
