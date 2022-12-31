@@ -14,17 +14,24 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			//Carrega o caminho completo da tela que será aberta
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
+			//Carrega a hierarquia de objetos do FXML
 			ScrollPane scrollPane = loader.load();
 			
-			//Adjusts scrollpane according to window
+			//Ajusta ScrollPanel conforme janela
 			scrollPane.setFitToHeight(true);
 			scrollPane.setFitToWidth(true);
 			
-			mainScene = new Scene(scrollPane);			
+			//Instancia da scena
+			mainScene = new Scene(scrollPane);
+			//setScene
 			primaryStage.setScene(mainScene);
+			//Especifica a cena a ser usada neste stage.
 			primaryStage.setResizable(false);
+			//Especifica o título do stage
 			primaryStage.setTitle("Sample JavaFX application");
+			//Mostra o stage (Janela)
 			primaryStage.show();
 			
 		} catch(Exception e) {
@@ -37,6 +44,7 @@ public class Main extends Application {
 	}
 
 	public static void main(String[] args) {
+		//Inicia o aplicativo
 		launch(args);
 	}
 }

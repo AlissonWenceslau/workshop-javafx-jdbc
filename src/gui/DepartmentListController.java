@@ -50,19 +50,26 @@ public class DepartmentListController implements Initializable {
 	}
 
 	private void initializeNodes() {
+		//Define o atributo 'id' da entidade department 
 		tableColumnId.setCellValueFactory(new PropertyValueFactory<>("id"));
+		//Define o atributo 'name' da entidade department
 		tableColumnName.setCellValueFactory(new PropertyValueFactory<>("name"));
 
+		//Faz a tabela acompanhar o tamanho da janela
 		Stage stage = (Stage) Main.getMainScene().getWindow();
 		tableViewDepartment.prefHeightProperty().bind(stage.heightProperty());
 	}
 	
+	//Método para atualizar a table view
 	public void updateTableView() {
 		if(service == null) {
 			throw new IllegalStateException("Service was null");
 		}
+		//Cria uma lista de departamentos
 		List<Department> list = service.findAll();
+		//Coloca a lista em um observable list de departamentos
 		obsList = FXCollections.observableArrayList(list);
+		//Adiciona a 'obsList' de departamentos na tabela
 		tableViewDepartment.setItems(obsList);
 	}
 

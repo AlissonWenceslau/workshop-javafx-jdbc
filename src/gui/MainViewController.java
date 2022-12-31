@@ -49,15 +49,23 @@ public class MainViewController implements Initializable {
 
 	private synchronized void loadView(String absoluteName) {
 		try {
+			//Carrega o caminho completo da tela que será aberta
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
+			//Carrega a hierarquia de objetos do FXML
 			VBox newVbox = loader.load();
 			
+			//Carrega uma referência da scena principal
 			Scene mainScene = Main.getMainScene();
+			//Carrega uma referência ao VBox
 			VBox mainVBox = (VBox) ((ScrollPane)mainScene.getRoot()).getContent();
+			//Carrega o MenuBar antes de limpar os filhos do VBox
 			Node mainMenu = mainVBox.getChildren().get(0);
+			//Limpa os filhos do VBox
 			mainVBox.getChildren().clear();
 			
+			//Configura novamente o MenuBar
 			mainVBox.getChildren().add(mainMenu);
+			//Acrescenta os objetos da view chamada
 			mainVBox.getChildren().addAll(newVbox);
 			
 		} catch (IOException e) {
@@ -78,8 +86,11 @@ public class MainViewController implements Initializable {
 			mainVBox.getChildren().add(mainMenu);
 			mainVBox.getChildren().addAll(newVbox);
 			
+			//Retorna o controlador associado ao objeto raiz.
 			DepartmentListController controller = loader.getController();
+			//Faz a injeção da depêndencia no atributo service definido na classe 'DepartmentList'
 			controller.setService(new DepartmentService());
+			//Atualiza a table view
 			controller.updateTableView();
 			
 		} catch (IOException e) {
