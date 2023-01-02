@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 
@@ -31,6 +32,8 @@ public class Main extends Application {
 			primaryStage.setResizable(false);
 			//Especifica o título do stage
 			primaryStage.setTitle("Sample JavaFX application");
+			//Especifica o ícone da janela
+			primaryStage.getIcons().add(new Image("file:icon.png"));
 			//Mostra o stage (Janela)
 			primaryStage.show();
 			
