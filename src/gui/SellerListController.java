@@ -91,7 +91,7 @@ public class SellerListController implements Initializable, DataChangeListener {
 		tableColumnEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
 		// Define o atributo 'birthDate' da entidade Seller
 		tableColumnBirthDate.setCellValueFactory(new PropertyValueFactory<>("birthDate"));
-		Utils.formatTableColumnDate(tableColumnBirthDate, "dd/MM/yyy");
+		Utils.formatTableColumnDate(tableColumnBirthDate, "dd/MM/yyyy");
 		// Define o atributo 'baseSalary' da entidade Seller
 		tableColumnBaseSalary.setCellValueFactory(new PropertyValueFactory<>("baseSalary"));
 		Utils.formatTableColumnDouble(tableColumnBaseSalary, 2);
@@ -126,10 +126,10 @@ public class SellerListController implements Initializable, DataChangeListener {
 			controller.setSeller(obj);
 			controller.setSellerService(new SellerService());
 			controller.subscribeDataChangeListener(this);
-			controller.updateData();
+			controller.updateFormData();
 
 			Stage dialogStage = new Stage();
-			dialogStage.setTitle("Enter department data");
+			dialogStage.setTitle("Enter seller data");
 			dialogStage.setScene(new Scene(pane));
 			dialogStage.setResizable(false);
 			dialogStage.initOwner(parentStage);
