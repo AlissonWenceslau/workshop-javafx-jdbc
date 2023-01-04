@@ -32,8 +32,6 @@ public class Main extends Application {
 			primaryStage.setResizable(false);
 			//Especifica o título do stage
 			primaryStage.setTitle("Sample JavaFX application");
-			//Especifica o ícone da janela
-			primaryStage.getIcons().add(new Image("file:icon.png"));
 			//Mostra o stage (Janela)
 			primaryStage.show();
 			
