@@ -1,4 +1,4 @@
-# Interface Gráfica com JavaF
+# Interface Gráfica com JavaFx
 
 Trata-se de um projeto java com interface gráfica JavaFX, utilizando boas práticas de programação combinado com um sistema de **Vendedores** e **Departamentos**, no qual o intuito foi implementar as quatros operações de crud, sendo elas:
 
