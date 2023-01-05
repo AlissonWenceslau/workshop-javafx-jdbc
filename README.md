@@ -46,7 +46,13 @@ Trata-se de um projeto java com interface gráfica JavaFX, utilizando boas prát
 - JavaFX SDK: 17 (LTS)
 - S.O: Linux Mint 21
 ### VM Arguments reference
-``--module-path "/home/user/libs/javafx-sdk/lib" --add-modules=javafx.fxml,javafx.controls``
+O comando a ser configurado abaixo, serve para você executar o projeto na IDE **Eclipse**, presumindo que você já baixou a biblioteca do JavaFx. Caso não tenha baixado, clique no link: [Gluon](https://gluonhq.com/products/javafx/)
+1. Clone o projeto e importe para dentro do eclipse;
+2. No eclipse, clique com o botão  direito no projeto;
+3. Run>Run configuration>Arguments;
+4. Em **_"VM arguments"_** cole o comando abaixo:<br>
+``--module-path "/home/[user]/libs/javafx-sdk/lib" --add-modules=javafx.fxml,javafx.controls``
+#### Obs: o caminho acima, corresponde as libs do **JavaFx**, certamente você terá que alterar de acordo com o caminho que você salvou essa biblioteca.
 
 ## Informações do banco de dados utilizado
 
